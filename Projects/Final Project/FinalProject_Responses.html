@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FinalProject_Responses.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="final-project">Final Project</h1>
+<p><strong>Christian Hollar</strong></p>
+<h2 id="part-1">Part 1</h2>
+<p>The analysis followed a structured approach. First, daily prices, risk-free rates, and portfolio holdings were loaded and processed to compute returns and market excess returns. The CAPM was then estimated for each stock using pre-2024 training data, with OLS regression determining alpha, beta, and residual variance.</p>
+<p>For the holding period, returns were decomposed into systematic (market-driven) and idiosyncratic (stock-specific) components. Cumulative returns were calculated for each, and portfolio-level attribution was derived by weighting individual stock returns by their allocation shares.</p>
+<p>This returned the following:</p>
+<table>
+<thead>
+<tr>
+<th>Portfolio</th>
+<th>Excess Return</th>
+<th>Systematic Return</th>
+<th>Idiosyncratic Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>0.075446</td>
+<td>0.189207</td>
+<td>-0.049520</td>
+</tr>
+<tr>
+<td>B</td>
+<td>0.140546</td>
+<td>0.179351</td>
+<td>0.019313</td>
+</tr>
+<tr>
+<td>C</td>
+<td>0.213817</td>
+<td>0.190422</td>
+<td>0.142389</td>
+</tr>
+<tr>
+<td>TOTAL</td>
+<td>0.429809</td>
+<td>0.558980</td>
+<td>0.112182</td>
+</tr>
+</tbody>
+</table>
+<p>Portfolio A exhibited the lowest overall excess return at 7.54%, primarily due to its negative idiosyncratic contribution (-4.95%), which dragged down performance despite a reasonable systematic return. Portfolio B delivered moderate excess returns of 14.05%, with a slightly positive idiosyncratic contribution (1.93%), indicating that stock selection added marginal value. Portfolio C was the standout performer with an excess return of 21.38%, driven by both strong systematic exposure and a significant positive idiosyncratic contribution (14.24%), suggesting excellent stock selection.</p>
+<p>The systematic component was relatively stable across all portfolios, ranging between 17.9% and 19.0%, reflecting consistent market-driven performance. In contrast, the idiosyncratic component showed substantial variation. Portfolio A suffered from poor stock-specific performance, while Portfolios B and C benefited from positive idiosyncratic effects. This divergence highlights the impact of individual stock selection, with Portfolio C’s alpha generation being particularly noteworthy.</p>
+<p>The combined portfolio achieved an excess return of 42.98%, with systematic factors contributing 55.90% and idiosyncratic factors contributing 11.22%. The dominance of systematic returns underscores the strong market performance during the holding period, while the net positive idiosyncratic contribution indicates that, on aggregate, active stock selection added value despite Portfolio A’s underperformance.</p>
+<p>The market exhibited strong performance during the holding period, as evidenced by the high systematic returns across all portfolios. Portfolio C’s exceptional results were driven by both market exposure and superior stock selection, while Portfolio A’s negative idiosyncratic return suggests misaligned picks that underperformed even in a favorable market.</p>
+<p>Notably, the aggregate idiosyncratic return was positive, demonstrating that active management added value overall.</p>
+<h2 id="part-2">Part 2</h2>
+<p>The analysis for Part 2 utilized the CAPM estimates from Part 1 but assumed an alpha of zero for each stock. Expected returns for each asset were calculated as the product of the stock's beta and the historical average excess return of the market (SPY) observed prior to the holding period. The covariance matrix was computed by combining systematic and idiosyncratic components based on CAPM betas, the market variance, and residual variances.</p>
+<p>Using these parameters, optimal portfolios were constructed to maximize the Sharpe ratio for each of the three sub-portfolios. Optimal portfolio weights were obtained by applying mean-variance optimization, specifically solving for weights as the product of the inverse covariance matrix and expected returns, normalized to sum to one. Portfolio attribution for the holding period was recalculated with these optimal weights.</p>
+<p>The optimized portfolios showed improved performance compared to Part 1. Portfolio A's excess return increased to 15.33% (from 7.54%), Portfolio B increased to 17.33% (from 14.05%), and Portfolio C increased to 24.98% (from 21.38%). Systematic returns remained stable, while idiosyncratic contributions improved relative to Part 1 results.</p>
+<table>
+<thead>
+<tr>
+<th>Portfolio</th>
+<th>Excess Return</th>
+<th>Systematic Return</th>
+<th>Idiosyncratic Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>0.153339</td>
+<td>0.204712</td>
+<td>-0.028295</td>
+</tr>
+<tr>
+<td>B</td>
+<td>0.173328</td>
+<td>0.189077</td>
+<td>0.012317</td>
+</tr>
+<tr>
+<td>C</td>
+<td>0.249837</td>
+<td>0.204209</td>
+<td>0.096611</td>
+</tr>
+<tr>
+<td>TOTAL</td>
+<td>0.624657</td>
+<td>0.639763</td>
+<td>0.074721</td>
+</tr>
+</tbody>
+</table>
+<p>The improvement in idiosyncratic contributions indicates more effective stock selection and allocation through mean-variance optimization, particularly in Portfolio C. The systematic returns across portfolios remained relatively consistent with Part 1, reflecting stable market conditions during the holding period. Portfolio A continued to exhibit a negative idiosyncratic contribution, although reduced in magnitude compared to Part 1.</p>
+<p>Additionally, the analysis compared expected versus realized idiosyncratic risk. Using CAPM residual variance estimates, the model's expected annualized idiosyncratic risk for stocks averaged 22%, close to the realized average of 24%. Individual stock risk estimates displayed similar distributions, with minor variations.</p>
+<p>The similarity between expected and realized idiosyncratic risks demonstrates the accuracy and reliability of the CAPM-based risk estimation method. This alignment provides confidence in the risk modeling approach and supports the effectiveness of the mean-variance optimization applied to these portfolios.</p>
+<h2 id="part-3">Part 3</h2>
+<p>The Normal Inverse Gaussian (NIG) and Skew Normal distributions are alternatives to the traditional normal distribution in financial modeling due to their ability to better represent features of financial returns. Empirical evidence demonstrates that asset returns often exhibit asymmetry (skewness) and extreme observations (heavy tails). These characteristics challenge the symmetry and thin-tail assumptions of the normal distribution, making it insufficient for accurately modeling financial data. As a result, distributions such as the NIG and Skew Normal have become relevant in finance.</p>
+<p>The Normal Inverse Gaussian distribution is useful because it can model both skewness and heavy tails through distinct parameters. It includes separate parameters that control asymmetry and tail thickness, providing flexibility when fitting empirical return distributions. This flexibility enables financial analysts and risk managers to better represent rare but impactful market events, such as sharp price movements, significant drawdowns, or market crashes. The explicit inclusion of skewness and kurtosis parameters makes the NIG distribution effective in measuring portfolio risk, calculating Value-at-Risk (VaR) and Expected Shortfall (ES), and pricing derivatives where tail risks affect valuations.</p>
+<p>The Skew Normal distribution modifies the standard normal distribution by adding a shape parameter to capture asymmetry. While it addresses skewness, it typically maintains lighter tails compared to the NIG and Student’s T distributions. This characteristic makes the Skew Normal distribution suitable in scenarios where financial returns exhibit moderate asymmetry without strong extreme events. Typical applications include modeling aggregated returns over longer periods, portfolio-level returns, or cases where simpler computational approaches are preferred. Despite its simpler structure, the Skew Normal still provides improvements over the normal distribution, better aligning with observed data while remaining computationally straightforward.</p>
+<p>Both the NIG and Skew Normal distributions have advantages for financial modeling. The choice between these distributions depends on factors such as the observed features of the returns data, the severity of tail events, the relevance of skewness, and computational considerations. The NIG distribution generally offers a more flexible approach for modeling asymmetry and tail risk in complex market conditions. The Skew Normal provides an alternative for situations where asymmetry is present, but heavy tails are less important.</p>
+<h2 id="part-4">Part 4</h2>
+<p>The risk modeling analysis compared four distributions (Normal, Student's T, Skew Normal, and Normal Inverse Gaussian) for each stock, selecting the best fit via Akaike Information Criterion (AIC) which penalizes log-likelihood by parameter count. The Gaussian copula approach produced slightly higher tail risk estimates than multivariate normal, particularly for expected shortfall.</p>
+<h5 id="vares-results">VaR/ES Results</h5>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Portfolio</th>
+<th>VaR</th>
+<th>ES</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MV Normal</td>
+<td>A</td>
+<td>1.4396%</td>
+<td>1.7960%</td>
+</tr>
+<tr>
+<td>MV Normal</td>
+<td>B</td>
+<td>1.3390%</td>
+<td>1.6741%</td>
+</tr>
+<tr>
+<td>MV Normal</td>
+<td>C</td>
+<td>1.3944%</td>
+<td>1.7372%</td>
+</tr>
+<tr>
+<td>MV Normal</td>
+<td>TOTAL</td>
+<td>3.8617%</td>
+<td>4.8071%</td>
+</tr>
+<tr>
+<td>Gaussian Copula</td>
+<td>A</td>
+<td>1.3873%</td>
+<td>1.8597%</td>
+</tr>
+<tr>
+<td>Gaussian Copula</td>
+<td>B</td>
+<td>1.2644%</td>
+<td>1.6630%</td>
+</tr>
+<tr>
+<td>Gaussian Copula</td>
+<td>C</td>
+<td>1.3403%</td>
+<td>1.7298%</td>
+</tr>
+<tr>
+<td>Gaussian Copula</td>
+<td>TOTAL</td>
+<td>3.8237%</td>
+<td>5.0130%</td>
+</tr>
+</tbody>
+</table>
+<h5 id="best-fit-distributions">Best Fit Distributions</h5>
+<table>
+<thead>
+<tr>
+<th>Stock</th>
+<th>Best Fit</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AAPL</td>
+<td>T</td>
+<td>df=7.35, loc=0, scale=0.0107</td>
+</tr>
+<tr>
+<td>NVDA</td>
+<td>T</td>
+<td>df=4.90, loc=0, scale=0.0219</td>
+</tr>
+<tr>
+<td>MSFT</td>
+<td>T</td>
+<td>df=7.85, loc=0, scale=0.0137</td>
+</tr>
+<tr>
+<td>AMZN</td>
+<td>T</td>
+<td>df=5.91, loc=0, scale=0.0169</td>
+</tr>
+<tr>
+<td>META</td>
+<td>T</td>
+<td>df=4.31, loc=0, scale=0.0159</td>
+</tr>
+<tr>
+<td>GOOGL</td>
+<td>T</td>
+<td>df=4.46, loc=0, scale=0.0143</td>
+</tr>
+<tr>
+<td>AVGO</td>
+<td>T</td>
+<td>df=4.61, loc=0, scale=0.0151</td>
+</tr>
+<tr>
+<td>TSLA</td>
+<td>T</td>
+<td>df=6.56, loc=0, scale=0.0279</td>
+</tr>
+<tr>
+<td>GOOG</td>
+<td>T</td>
+<td>df=4.63, loc=0, scale=0.0146</td>
+</tr>
+<tr>
+<td>BRK-B</td>
+<td>T</td>
+<td>df=6.79, loc=0, scale=0.0073</td>
+</tr>
+<tr>
+<td>JPM</td>
+<td>T</td>
+<td>df=3.63, loc=0, scale=0.0090</td>
+</tr>
+<tr>
+<td>LLY</td>
+<td>T</td>
+<td>df=3.25, loc=0, scale=0.0113</td>
+</tr>
+<tr>
+<td>V</td>
+<td>T</td>
+<td>df=9.67, loc=0, scale=0.0088</td>
+</tr>
+<tr>
+<td>XOM</td>
+<td>T</td>
+<td>df=8.16, loc=0, scale=0.0137</td>
+</tr>
+<tr>
+<td>UNH</td>
+<td>T</td>
+<td>df=3.37, loc=0, scale=0.0087</td>
+</tr>
+<tr>
+<td>MA</td>
+<td>T</td>
+<td>df=6.54, loc=0, scale=0.0089</td>
+</tr>
+<tr>
+<td>COST</td>
+<td>T</td>
+<td>df=4.60, loc=0, scale=0.0091</td>
+</tr>
+<tr>
+<td>PG</td>
+<td>T</td>
+<td>df=5.53, loc=0, scale=0.0076</td>
+</tr>
+<tr>
+<td>WMT</td>
+<td>T</td>
+<td>df=6.22, loc=0, scale=0.0075</td>
+</tr>
+<tr>
+<td>HD</td>
+<td>T</td>
+<td>df=4.58, loc=0, scale=0.0103</td>
+</tr>
+<tr>
+<td>NFLX</td>
+<td>T</td>
+<td>df=3.68, loc=0, scale=0.0158</td>
+</tr>
+<tr>
+<td>JNJ</td>
+<td>T</td>
+<td>df=3.71, loc=0, scale=0.0071</td>
+</tr>
+<tr>
+<td>ABBV</td>
+<td>T</td>
+<td>df=4.04, loc=0, scale=0.0087</td>
+</tr>
+<tr>
+<td>CRM</td>
+<td>T</td>
+<td>df=5.17, loc=0, scale=0.0142</td>
+</tr>
+<tr>
+<td>BAC</td>
+<td>T</td>
+<td>df=4.31, loc=0, scale=0.0128</td>
+</tr>
+<tr>
+<td>ORCL</td>
+<td>T</td>
+<td>df=3.09, loc=0, scale=0.0109</td>
+</tr>
+<tr>
+<td>MRK</td>
+<td>T</td>
+<td>df=8.37, loc=0, scale=0.0104</td>
+</tr>
+<tr>
+<td>CVX</td>
+<td>T</td>
+<td>df=4.69, loc=0, scale=0.0111</td>
+</tr>
+<tr>
+<td>KO</td>
+<td>T</td>
+<td>df=5.31, loc=0, scale=0.0066</td>
+</tr>
+<tr>
+<td>CSCO</td>
+<td>T</td>
+<td>df=4.03, loc=0, scale=0.0086</td>
+</tr>
+<tr>
+<td>WFC</td>
+<td>T</td>
+<td>df=4.98, loc=0, scale=0.0137</td>
+</tr>
+<tr>
+<td>ACN</td>
+<td>T</td>
+<td>df=7.12, loc=0, scale=0.0116</td>
+</tr>
+<tr>
+<td>NOW</td>
+<td>NIG</td>
+<td>a=0.92, b=-5.8e-7, loc=0, scale=0.0194</td>
+</tr>
+<tr>
+<td>MCD</td>
+<td>T</td>
+<td>df=10.67, loc=0, scale=0.0080</td>
+</tr>
+<tr>
+<td>PEP</td>
+<td>T</td>
+<td>df=5.86, loc=0, scale=0.0077</td>
+</tr>
+<tr>
+<td>IBM</td>
+<td>T</td>
+<td>df=4.88, loc=0, scale=0.0076</td>
+</tr>
+<tr>
+<td>DIS</td>
+<td>T</td>
+<td>df=5.01, loc=0, scale=0.0129</td>
+</tr>
+<tr>
+<td>TMO</td>
+<td>T</td>
+<td>df=5.17, loc=0, scale=0.0114</td>
+</tr>
+<tr>
+<td>LIN</td>
+<td>T</td>
+<td>df=3.22, loc=0, scale=0.0084</td>
+</tr>
+<tr>
+<td>ABT</td>
+<td>T</td>
+<td>df=6.21, loc=0, scale=0.0100</td>
+</tr>
+<tr>
+<td>AMD</td>
+<td>T</td>
+<td>df=4.79, loc=0, scale=0.0228</td>
+</tr>
+<tr>
+<td>ADBE</td>
+<td>T</td>
+<td>df=5.93, loc=0, scale=0.0164</td>
+</tr>
+<tr>
+<td>PM</td>
+<td>T</td>
+<td>df=8.55, loc=0, scale=0.0091</td>
+</tr>
+<tr>
+<td>ISRG</td>
+<td>T</td>
+<td>df=4.81, loc=0, scale=0.0139</td>
+</tr>
+<tr>
+<td>GE</td>
+<td>T</td>
+<td>df=7.64, loc=0, scale=0.0131</td>
+</tr>
+<tr>
+<td>GS</td>
+<td>T</td>
+<td>df=5.59, loc=0, scale=0.0123</td>
+</tr>
+<tr>
+<td>INTU</td>
+<td>T</td>
+<td>df=5.68, loc=0, scale=0.0150</td>
+</tr>
+<tr>
+<td>CAT</td>
+<td>T</td>
+<td>df=4.51, loc=0, scale=0.0133</td>
+</tr>
+<tr>
+<td>QCOM</td>
+<td>T</td>
+<td>df=5.22, loc=0, scale=0.0156</td>
+</tr>
+<tr>
+<td>TXN</td>
+<td>T</td>
+<td>df=9.37, loc=0, scale=0.0134</td>
+</tr>
+<tr>
+<td>VZ</td>
+<td>T</td>
+<td>df=3.28, loc=0, scale=0.0091</td>
+</tr>
+<tr>
+<td>AXP</td>
+<td>T</td>
+<td>df=4.73, loc=0, scale=0.0123</td>
+</tr>
+<tr>
+<td>T</td>
+<td>T</td>
+<td>df=3.02, loc=0, scale=0.0101</td>
+</tr>
+<tr>
+<td>BKNG</td>
+<td>T</td>
+<td>df=8.26, loc=0, scale=0.0136</td>
+</tr>
+<tr>
+<td>SPGI</td>
+<td>T</td>
+<td>df=4.30, loc=0, scale=0.0101</td>
+</tr>
+<tr>
+<td>MS</td>
+<td>T</td>
+<td>df=4.52, loc=0, scale=0.0123</td>
+</tr>
+<tr>
+<td>RTX</td>
+<td>T</td>
+<td>df=3.21, loc=0, scale=0.0091</td>
+</tr>
+<tr>
+<td>PLTR</td>
+<td>T</td>
+<td>df=3.28, loc=0, scale=0.0285</td>
+</tr>
+<tr>
+<td>PFE</td>
+<td>T</td>
+<td>df=4.12, loc=0, scale=0.0106</td>
+</tr>
+<tr>
+<td>BLK</td>
+<td>T</td>
+<td>df=8.02, loc=0, scale=0.0121</td>
+</tr>
+<tr>
+<td>DHR</td>
+<td>T</td>
+<td>df=5.29, loc=0, scale=0.0119</td>
+</tr>
+<tr>
+<td>NEE</td>
+<td>T</td>
+<td>df=2.94, loc=0, scale=0.0107</td>
+</tr>
+<tr>
+<td>HON</td>
+<td>T</td>
+<td>df=5.91, loc=0, scale=0.0094</td>
+</tr>
+<tr>
+<td>CMCSA</td>
+<td>T</td>
+<td>df=4.55, loc=0, scale=0.0106</td>
+</tr>
+<tr>
+<td>PGR</td>
+<td>T</td>
+<td>df=2.67, loc=0, scale=0.0100</td>
+</tr>
+<tr>
+<td>LOW</td>
+<td>T</td>
+<td>df=4.20, loc=0, scale=0.0112</td>
+</tr>
+<tr>
+<td>AMGN</td>
+<td>T</td>
+<td>df=6.29, loc=0, scale=0.0109</td>
+</tr>
+<tr>
+<td>UNP</td>
+<td>T</td>
+<td>df=4.00, loc=0, scale=0.0100</td>
+</tr>
+<tr>
+<td>TJX</td>
+<td>T</td>
+<td>df=10.11, loc=0, scale=0.0091</td>
+</tr>
+<tr>
+<td>AMAT</td>
+<td>T</td>
+<td>df=10.42, loc=0, scale=0.0193</td>
+</tr>
+<tr>
+<td>UBER</td>
+<td>T</td>
+<td>df=9.16, loc=0, scale=0.0200</td>
+</tr>
+<tr>
+<td>C</td>
+<td>T</td>
+<td>df=4.21, loc=0, scale=0.0119</td>
+</tr>
+<tr>
+<td>BSX</td>
+<td>T</td>
+<td>df=3.55, loc=0, scale=0.0086</td>
+</tr>
+<tr>
+<td>ETN</td>
+<td>T</td>
+<td>df=3.98, loc=0, scale=0.0122</td>
+</tr>
+<tr>
+<td>COP</td>
+<td>T</td>
+<td>df=5.86, loc=0, scale=0.0146</td>
+</tr>
+<tr>
+<td>BA</td>
+<td>T</td>
+<td>df=4.66, loc=0, scale=0.0131</td>
+</tr>
+<tr>
+<td>BX</td>
+<td>T</td>
+<td>df=6.20, loc=0, scale=0.0182</td>
+</tr>
+<tr>
+<td>SYK</td>
+<td>T</td>
+<td>df=2.69, loc=0, scale=0.0087</td>
+</tr>
+<tr>
+<td>PANW</td>
+<td>T</td>
+<td>df=3.35, loc=0, scale=0.0157</td>
+</tr>
+<tr>
+<td>ADP</td>
+<td>T</td>
+<td>df=3.42, loc=0, scale=0.0086</td>
+</tr>
+<tr>
+<td>FI</td>
+<td>T</td>
+<td>df=3.70, loc=0, scale=0.0089</td>
+</tr>
+<tr>
+<td>ANET</td>
+<td>T</td>
+<td>df=2.75, loc=0, scale=0.0157</td>
+</tr>
+<tr>
+<td>GILD</td>
+<td>T</td>
+<td>df=8.56, loc=0, scale=0.0112</td>
+</tr>
+<tr>
+<td>BMY</td>
+<td>T</td>
+<td>df=4.34, loc=0, scale=0.0091</td>
+</tr>
+<tr>
+<td>SCHW</td>
+<td>T</td>
+<td>df=2.83, loc=0, scale=0.0159</td>
+</tr>
+<tr>
+<td>TMUS</td>
+<td>T</td>
+<td>df=5.67, loc=0, scale=0.0096</td>
+</tr>
+<tr>
+<td>DE</td>
+<td>T</td>
+<td>df=5.68, loc=0, scale=0.0138</td>
+</tr>
+<tr>
+<td>ADI</td>
+<td>T</td>
+<td>df=6.39, loc=0, scale=0.0136</td>
+</tr>
+<tr>
+<td>VRTX</td>
+<td>T</td>
+<td>df=4.00, loc=0, scale=0.0104</td>
+</tr>
+<tr>
+<td>SBUX</td>
+<td>T</td>
+<td>df=4.24, loc=0, scale=0.0097</td>
+</tr>
+<tr>
+<td>MMC</td>
+<td>T</td>
+<td>df=5.62, loc=0, scale=0.0085</td>
+</tr>
+<tr>
+<td>MDT</td>
+<td>T</td>
+<td>df=4.57, loc=0, scale=0.0104</td>
+</tr>
+<tr>
+<td>CB</td>
+<td>T</td>
+<td>df=5.69, loc=0, scale=0.0104</td>
+</tr>
+<tr>
+<td>LMT</td>
+<td>T</td>
+<td>df=3.66, loc=0, scale=0.0074</td>
+</tr>
+<tr>
+<td>KKR</td>
+<td>T</td>
+<td>df=7.28, loc=0, scale=0.0171</td>
+</tr>
+<tr>
+<td>MU</td>
+<td>T</td>
+<td>df=5.06, loc=0, scale=0.0181</td>
+</tr>
+<tr>
+<td>PLD</td>
+<td>T</td>
+<td>df=6.54, loc=0, scale=0.0139</td>
+</tr>
+<tr>
+<td>LRCX</td>
+<td>T</td>
+<td>df=5.53, loc=0, scale=0.0185</td>
+</tr>
+<tr>
+<td>EQIX</td>
+<td>T</td>
+<td>df=5.22, loc=0, scale=0.0122</td>
+</tr>
+</tbody>
+</table>
+<p>The AIC selection overwhelmingly favored the Student's T distribution (98/99 stocks), indicating financial returns exhibit heavier tails than normal distributions can capture. NOW was the sole exception best modeled by NIG distribution (α=0.92), suggesting mild asymmetry. The Gaussian copula produced 4.3% higher total portfolio ES than multivariate normal, better capturing tail dependence. Portfolio C showed the most divergence between methods (VaR -3.9%, ES -0.4%), while Portfolio B was most stable. All fitted distributions had location parameters constrained to zero per the problem requirements.</p>
+<h2 id="part-5">Part 5</h2>
+<p>The analysis in Part 5 constructed optimal risk parity portfolios using Expected Shortfall (ES) as the primary risk measure. Risk parity optimization was implemented by adjusting asset weights so that each asset contributed equally to the portfolio’s overall ES risk. Asset returns were simulated based on their fitted best-distribution models and correlated using a Gaussian copula approach. Portfolio optimization involved iteratively recalculating ES contributions and minimizing the variance between these contributions across assets. Once optimized weights were obtained, portfolio attribution for the holding period was recomputed using the previously fitted CAPM betas and decomposed into systematic and idiosyncratic components.</p>
+<p>The risk parity portfolios, optimized using Expected Shortfall (ES) as the risk measure, yielded mixed performance compared to earlier results. Portfolio A's excess return was slightly lower at approximately 7.47%, similar to its original return of 7.54% in Part 1. However, its idiosyncratic contribution deteriorated further from -4.95% to -10.47%, indicating that the revised weights failed to mitigate negative stock-specific performance. Portfolio B showed a minor increase in excess returns from 14.05% in Part 1 to 14.66%, but the idiosyncratic component turned negative (-1.62%), suggesting weaker active stock selection.</p>
+<p>Portfolio C, already the strongest performer, improved slightly, with excess returns increasing from 21.38% in Part 1 to 22.40% under the new risk parity approach. Systematic returns remained stable, and the idiosyncratic contribution remained strongly positive at 10.94%, demonstrating continued effective stock selection despite more conservative risk-based weight adjustments.</p>
+<p>Overall, the combined portfolio showed lower total excess returns (33.88%) compared to Part 1 (42.98%) and Part 2 (62.47%), reflecting mixed results from the diversification strategy of the risk parity approach. The total idiosyncratic contribution (2.07%) also decreased relative to Part 1 (11.22%) and Part 2 (7.47%), indicating that the risk parity method primarily emphasized systematic factors and resulted in less favorable outcomes from active stock selection.</p>
+
+</body>
+</html>
